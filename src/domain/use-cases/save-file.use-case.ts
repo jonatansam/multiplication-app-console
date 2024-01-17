@@ -6,17 +6,17 @@ export interface SaveFileUseCase {
 
 export interface Options {
     fileContent : string;
-    fileDestination: string;
-    fileName   : string;
+    fileDestination?: string;
+    fileName?   : string;
 }
 
-export class saveFile implements SaveFileUseCase {
+export class SaveFile implements SaveFileUseCase {
 
     constructor(){
         /**repository: storageRepository */
     }
 
-    execute({fileContent, fileDestination, fileName }: Options) : boolean {
+    execute({fileContent, fileDestination = 'outputs', fileName = 'table' }: Options) : boolean {
 
         try {           
             //crear la carpeta del path en caso de no estar en el directorio

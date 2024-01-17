@@ -1,5 +1,5 @@
 import { CreateTable } from "../domain/use-cases/create-table.use-case";
-import { saveFile } from "../domain/use-cases/save-file.use-case";
+import { SaveFile } from "../domain/use-cases/save-file.use-case";
 
 interface RunOptions {
     base: number;
@@ -17,7 +17,7 @@ export class ServerApp {
         console.log('servidor corriendo!!');
 
         const table = new CreateTable().execute({base, limit});
-        const wasCreated = new saveFile()
+        const wasCreated = new SaveFile()
             .execute({
                 fileContent: table, 
                 fileDestination,

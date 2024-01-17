@@ -39,7 +39,7 @@ export const yarg = yargs(hideBin(process.argv) )
     .check( (argv, options) => {
         
         //si el argumento b es menor a 1 entonces devuelve un error
-        if(argv.b < 1 ) throw 'Error: base must be greater than 0';
+        if(argv.b < 1 ) throw new Error('Error: base must be greater than 0');
 
         return true;
     })

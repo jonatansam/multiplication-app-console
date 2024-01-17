@@ -1,5 +1,5 @@
 import { yarg } from './config/plugins/args.pluggins';
-import { ServerApp } from './presentation/serve-app';
+import { ServerApp } from './presentation/server-app';
 
 //funcion anonima autoinvocada
 ( async () => {

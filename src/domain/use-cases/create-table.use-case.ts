@@ -20,7 +20,9 @@ export class CreateTable implements CreateTableUseCase {
         const headerMessage: string = `----------------------------\nTABLA DEL ${base}\n----------------------------\n`;
         let message = '';
         for(let i = 1; i <= limit; i++){
-            message += `${base} x ${i} = ${base*i}\n`;
+            message += `${base} x ${i} = ${base*i}`;
+
+            if( i < limit) message += '\n';
         }
         return message = headerMessage + message;
     }
