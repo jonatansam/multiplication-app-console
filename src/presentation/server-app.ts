@@ -14,7 +14,7 @@ interface RunOptions {
 export class ServerApp {
 
     static run({base, limit, showTable, fileDestination, fileName}: RunOptions){ 
-        console.log('servidor corriendo!!');
+        console.log('Server running...');
 
         const table = new CreateTable().execute({base, limit});
         const wasCreated = new SaveFile()
@@ -27,7 +27,7 @@ export class ServerApp {
         if(showTable) console.log(table);
         //operador ternario sirve para hacer condiciones
         (wasCreated) 
-            ? console.log('file creted!')
+            ? console.log('File Created!')
             : console.error("Error creating file");
     }
 }
